@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="../static/css/common.css">
+    <link rel="stylesheet" href="../static/css/TeacherPersonalInfo.css">
+</head>
+<body>
+<form method="post" action="/editing">
+<div class="container flgure">
+    <div class="content">
+        <ul class="clearfix info">
+            <li class="active">基础信息</li>
+        </ul>
+        <div class="basic">
+            <div class="select active">
+                <p>
+                    <!--href="javascript:location.reload();" 页面刷新操作-->
+                    <a  target="main" >
+                        <input type="submit"  value="保  存" >
+                       <!--<span type="submit" >保存</span>-->
+					</a>
+                </p>
+                <div class="left fl">
+                    <div>
+                        <label for="">姓名：</label>
+                        <input type="text" id="name" name="name" value="{{ result[0][0] }}" >
+                    </div>
+                    <div>
+                        <label for="">性别：</label>
+                        <input type="text" id="sex" name="sex" value="{{ result[0][1] }}" >
+                    </div>
+                    <div>
+                        <label for="">出生日期：</label>
+                        <input type="text" id="birth" name="birth" value="{{ result[0][3] }}" >
+                    </div>
+                    <div>
+                        <label for="">所属部门：</label>
+                        <input type="text" id="dept" name="dept" value="{{ result[0][4] }}" class="id" >
+                    </div>
+                    <div  class="label">
+                        <label for="">联系方式：</label>
+                        <input type="text" id="tel" name="tel" value="{{ result[0][8] }}" >
+                    </div>
+                    <div  class="label">
+                        <label for="">家庭地址：</label>
+                        <input type="text" id="address" name="address" value="{{ result[0][7] }}" >
+                    </div>
+                    <div  class="label">
+                        <label for="">个人宣言：</label>
+                        <input type="textarea" id="intro" name="intro" value="{{ result[0][9] }}" >
+                    </div>
+                </div>
+                <div class="right fr">
+                    <div>
+                        <label for="">工号：</label>
+                        <input type="number" id="id" name="sta_no" value="{{ result[0][2] }}" >
+                    </div>
+                    <div>
+                        <label for="">民族：</label>
+                        <input type="text"  value="汉">
+                    </div>
+                    <div class="label">
+                        <label for="">文化程度：</label>
+                        <input type="text" id="edu" name="edu" value="{{ result[0][6] }}" >
+                    </div>
+                    <div  class="label">
+                        <label for="">员工职位：</label>
+                        <input type="text" id="job" name="job" value="{{ result[0][5] }}" >
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
+<!--<script src="js/jquery-1.9.1.min.js"></script>
+<script>
+    $('.info li').click(function() {
+        $(this).addClass("active").siblings().removeClass("active");
+        $('.basic .select').eq($("ul li").index(this)).addClass("active").siblings().removeClass("active")
+    })
+</script>-->
+</body>
+</html>

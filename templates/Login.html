@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns:font-family="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../static/css/login.css"/>
+		 <link rel="icon" href="../static/images/logo-S.png" height="60" width="60" type="image/x-icon"/>
+		<script src="../static/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+	<form method="post" action="/login">
+		<div class="login">
+			<div class="content clearfix">
+				<div class="content-left">
+					<div class="logo">
+						<img src="../static/images/smalllogo.png" height="189" width="189" alt=""/>
+						<p>很优秀公司员工培训管理系统</p>
+					</div>
+				</div>
+
+				<div class="shu"></div>
+				<div class="content-right">
+					<div class="login-form">
+						<h2>用户登录/LOGIN</h2>
+						<div class="identifire">
+							<span>身　份：</span>
+							<select>
+								<option value="员工" selected="selected">员工</option>
+								<option value="部长">部长</option>
+							</select>
+						</div>
+
+						<div class="account clearfix">
+							<span>账　号：</span>
+							<input type="text" name="sta_id" id="email" class="ipt" placeholder="输入员工编号" oninput="setCustomValidity('');" required>
+						</div>
+						<div class="password clearfix">
+							<span>密　码：</span>
+								<input type="password" name="password" id="password" class="ipt" placeholder="请输入登录密码" oninput="setCustomValidity('');" required>
+						</div>
+						<div class="btn" >
+							 <!--<button type="submit"  id="button">登录</button>-->
+							<input type="submit"  value="登  录" >
+							<!--<span class="forget"><a href="password.html">忘记密码</a></span>-->
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</form>
+	</body>
+</html>
